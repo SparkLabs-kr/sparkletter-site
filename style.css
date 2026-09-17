@@ -67,18 +67,6 @@ a{color:inherit}
 }
 .side__arc:hover{color:var(--text)}
 
-/* ── 배경 워터마크 ─────────────────── */
-.watermark{
-  position:fixed; inset:0; z-index:-1; pointer-events:none;
-  display:flex; align-items:center; justify-content:center;
-  padding-left:var(--side); overflow:hidden;
-}
-.watermark img{
-  width:min(165vw, 2400px); max-width:none; height:auto;
-  opacity:.06;
-}
-@media (max-width:900px){ .watermark{display:none} }
-
 /* ── 본문 ───────────────────────────── */
 .has-side .main{position:relative; z-index:1; margin-left:var(--side); padding:44px 32px 80px; max-width:1180px}
 .main.narrow{max-width:660px; padding-top:64px}
