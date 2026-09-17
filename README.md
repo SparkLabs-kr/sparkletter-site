@@ -65,7 +65,7 @@ overrides.tsv에서 세부까지 지정하려면 `링크<TAB>open:demoday` 처�
 
     # data/archive.tsv 맨 위에 추가:  2026.9.30<TAB>9월 소식<TAB>https://stib.ee/xxxx
     python3 data/classify.py
-    git add -A && git commit -m "add: 9월호" && git push origin main && git push personal main
+    git add -A && git commit -m "add: 9월호" && git push origin main
 
 링크는 스티비 아카이브에서 해당 호 제목 우클릭 → 링크 주소 복사.
 `articles.json`은 `cache: 'no-cache'`로 읽으므로 방문자에게 옛 목록이 남지 않는다.
@@ -87,3 +87,10 @@ overrides.tsv에서 세부까지 지정하려면 `링크<TAB>open:demoday` 처�
 > 후보 4종 비교본은 `mockups/palettes.html`에 남아 있다.
 > 어두운 바탕이므로 로고는 **logo-white.png**(원본에서 검은 글자만 흰색으로 바꾼 것)를 쓴다.
 > 원본은 `data/logo.png`. 배경을 다시 밝게 바꾸면 원본으로 되돌리면 된다.
+
+## 저장소 · 배포 주소
+- **정식**: `SparkLabs-kr/sparkletter-site` (Public) → https://sparklabs-kr.github.io/sparkletter-site/
+- 개인 계정 `sl2266/sparkletter-site`는 회사 저장소가 Private이던 동안 임시로 쓰던 미러다.
+  회사 Pages가 뜨면 더 쓰지 않는다. (remote 이름 `personal`)
+
+평소에는 `git push origin main` 하나면 된다.
