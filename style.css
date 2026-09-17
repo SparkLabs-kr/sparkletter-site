@@ -1,6 +1,21 @@
+/* 2026 웜 뉴트럴 라이트 팔레트
+   - 순백 대신 본(bone), 검정 대신 차콜 — 눈부심을 줄인다
+   - 액센트(브랜드 핑크)는 넓게 칠하지 않고 행동·강조에만 쓴다 */
 :root{
-  --bg:#000; --text:#f2f2f4; --muted:#8e8e96; --line:#232327;
-  --pink:#ED1968; --blue:#2E75B6; --green:#3AAA35; --orange:#F7941E;
+  --bg:#F6F4EF;        /* 본 — 페이지 바탕 */
+  --surface:#FFFFFF;   /* 카드 등 올라온 면 */
+  --line:#E4E0D7;
+  --line-2:#D6D1C6;
+  --text:#23211E;      /* 차콜 */
+  --muted:#756F67;
+  --accent:#ED1968;    /* 스파크랩 핑크 */
+  --accent-ink:#FFFFFF;
+
+  /* 카테고리 색 — 칩에만 쓴다 */
+  --c-insight:#C2185B;
+  --c-open:#2E6F57;
+  --c-monthly:#B26A12;
+
   --side:268px;
 }
 *{box-sizing:border-box}
@@ -9,9 +24,9 @@ body{
   margin:0; background:var(--bg); color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo",sans-serif;
   line-height:1.6; -webkit-font-smoothing:antialiased;
+  position:relative; z-index:0;
 }
 a{color:inherit}
-body{position:relative; z-index:0}
 
 /* ── 왼쪽 사이드바 ──────────────────── */
 .side{
@@ -29,8 +44,8 @@ body{position:relative; z-index:0}
   color:var(--muted); font-size:14.5px; letter-spacing:.02em;
 }
 .nav__main span{font-size:16px; line-height:1}
-.nav__main:hover{background:#111114; color:var(--text)}
-.nav__main[aria-current="page"]{background:#fff; color:#000; font-weight:700}
+.nav__main:hover{background:#EDEAE2; color:var(--text)}
+.nav__main[aria-current="page"]{background:var(--text); color:var(--bg); font-weight:700}
 
 /* home 아래 하위 탭 */
 .side__subs{
@@ -41,7 +56,7 @@ body{position:relative; z-index:0}
   padding:6px 10px; border-radius:7px; text-decoration:none;
   color:var(--muted); font-size:12.5px;
 }
-.side__subs a:hover{background:#111114; color:var(--text)}
+.side__subs a:hover{background:#EDEAE2; color:var(--text)}
 
 .side__arc{
   margin-top:auto; font-size:12px; color:var(--muted);
@@ -57,7 +72,7 @@ body{position:relative; z-index:0}
 }
 .watermark img{
   width:min(165vw, 2400px); max-width:none; height:auto;
-  opacity:.07; filter:saturate(1.1);
+  opacity:.05;
 }
 @media (max-width:900px){ .watermark{display:none} }
 
@@ -70,9 +85,9 @@ body{position:relative; z-index:0}
 .hero p{color:var(--muted); font-size:14px; margin:0 0 20px}
 .hero__link{
   display:inline-block; font-size:13px; font-weight:700; text-decoration:none;
-  color:#fff; background:var(--pink); padding:11px 18px; border-radius:999px;
+  color:var(--accent-ink); background:var(--accent); padding:11px 18px; border-radius:999px;
 }
-.hero__link:hover{filter:brightness(1.1)}
+.hero__link:hover{filter:brightness(1.06)}
 
 .sec{margin-bottom:54px; scroll-margin-top:24px}
 .sec__h{
@@ -80,47 +95,59 @@ body{position:relative; z-index:0}
   padding-bottom:13px; border-bottom:1px solid var(--line);
 }
 
-/* ── 카드 (색 꽉 채움) ──────────────── */
+/* ── 세부 분류 필터 칩 ─────────────── */
+.fchips{display:flex; flex-wrap:wrap; gap:8px; margin:-4px 0 20px}
+.fchip{
+  appearance:none; cursor:pointer; font:inherit; font-size:12.5px;
+  background:transparent; color:var(--muted);
+  border:1px solid var(--line-2); border-radius:999px; padding:7px 14px;
+}
+.fchip:hover{color:var(--text); border-color:var(--muted)}
+.fchip[aria-pressed="true"]{background:var(--text); color:var(--bg); border-color:var(--text); font-weight:700}
+
+/* ── 카드 ───────────────────────────── */
 .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
 .card{
   display:flex; flex-direction:column; text-decoration:none;
   border-radius:14px; padding:18px 17px 15px; min-height:186px;
-  background:var(--c); color:#fff; transition:transform .12s ease, filter .12s ease;
+  background:var(--surface); border:1px solid var(--line);
+  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
-.card:hover{transform:translateY(-3px); filter:brightness(1.07)}
-.card--insight{--c:var(--pink)}
-.card--open   {--c:var(--green)}
-.card--monthly{--c:var(--orange)}
+.card:hover{transform:translateY(-3px); box-shadow:0 8px 20px rgba(35,33,30,.08); border-color:var(--line-2)}
 .chip{
-  align-self:flex-start; font-size:10.5px; font-weight:700;
+  align-self:flex-start; font-size:10.5px; font-weight:700; letter-spacing:.01em;
   padding:4px 9px; border-radius:6px; margin-bottom:13px;
-  background:rgba(255,255,255,.92); color:#111;
+  background:var(--c); color:#fff;
 }
+.card--insight{--c:var(--c-insight)}
+.card--open   {--c:var(--c-open)}
+.card--monthly{--c:var(--c-monthly)}
 .card__t{
   font-size:14.5px; font-weight:700; line-height:1.45; letter-spacing:-.01em;
+  color:var(--text);
   flex:1; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
 }
-.card__d{margin-top:13px; font-size:11.5px; color:rgba(255,255,255,.8); font-variant-numeric:tabular-nums}
+.card__d{margin-top:13px; font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums}
 
 .more{
   display:block; margin:22px auto 0; padding:10px 22px;
-  background:transparent; color:var(--muted); border:1px solid var(--line);
+  background:transparent; color:var(--muted); border:1px solid var(--line-2);
   border-radius:999px; font:inherit; font-size:13px; cursor:pointer;
 }
-.more:hover{color:var(--text); border-color:#3a3a40}
+.more:hover{color:var(--text); border-color:var(--muted)}
 .empty{color:var(--muted); font-size:14px; grid-column:1/-1; padding:24px 0}
 
 /* ── 구독 / 피드백 ──────────────────── */
 .lede{font-size:26px; margin:0 0 14px; letter-spacing:-.02em}
 .sub{color:var(--muted); font-size:14px; margin:0 0 28px}
 .bullets{list-style:none; padding:0; margin:0 0 32px; font-size:14px}
-.bullets li{padding:12px 0; border-bottom:1px solid var(--line); color:#d6d6da}
+.bullets li{padding:12px 0; border-bottom:1px solid var(--line); color:#403C37}
 .bullets b{color:var(--text)}
 .cta{
   display:block; text-align:center; padding:16px; border-radius:10px;
-  background:var(--pink); color:#fff; font-size:15px; font-weight:700; text-decoration:none;
+  background:var(--accent); color:var(--accent-ink); font-size:15px; font-weight:700; text-decoration:none;
 }
-.cta:hover{filter:brightness(1.1)}
+.cta:hover{filter:brightness(1.06)}
 .fine{margin-top:16px; font-size:12px; color:var(--muted); text-align:center}
 
 /* ── 반응형 ─────────────────────────── */
@@ -145,13 +172,3 @@ body{position:relative; z-index:0}
   .lede{font-size:21px}
   .nav__main{padding:8px 10px; font-size:13px}
 }
-
-/* ── 세부 분류 필터 칩 ─────────────── */
-.fchips{display:flex; flex-wrap:wrap; gap:8px; margin:-4px 0 20px}
-.fchip{
-  appearance:none; cursor:pointer; font:inherit; font-size:12.5px;
-  background:transparent; color:var(--muted);
-  border:1px solid var(--line); border-radius:999px; padding:7px 14px;
-}
-.fchip:hover{color:var(--text); border-color:#3a3a40}
-.fchip[aria-pressed="true"]{background:var(--text); color:#000; border-color:var(--text); font-weight:700}
