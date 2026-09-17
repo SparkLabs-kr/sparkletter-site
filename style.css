@@ -145,3 +145,13 @@ body{position:relative; z-index:0}
   .lede{font-size:21px}
   .nav__main{padding:8px 10px; font-size:13px}
 }
+
+/* ── 세부 분류 필터 칩 ─────────────── */
+.fchips{display:flex; flex-wrap:wrap; gap:8px; margin:-4px 0 20px}
+.fchip{
+  appearance:none; cursor:pointer; font:inherit; font-size:12.5px;
+  background:transparent; color:var(--muted);
+  border:1px solid var(--line); border-radius:999px; padding:7px 14px;
+}
+.fchip:hover{color:var(--text); border-color:#3a3a40}
+.fchip[aria-pressed="true"]{background:var(--text); color:#000; border-color:var(--text); font-weight:700}

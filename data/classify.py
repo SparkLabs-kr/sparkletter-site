@@ -37,6 +37,40 @@ RULES = [
 
 FALLBACK = 'insight'
 
+# ── 'open' 안의 세부 분류 (위에서부터 먼저 걸리는 쪽이 이김) ────────────────
+SUBS = ['batch', 'demoday', 'support', 'session']
+
+SUB_RULES = [
+    # 스파크랩 배치·액셀러레이팅 : 뽑혀서 들어가는 프로그램
+    ('batch', [
+        r'배치', r'\d+\s*기\b', r'Spark Claw', r'스파크클로', r'액셀러레이팅',
+        r'함께 성장할', r'프론티어를 찾습니다', r'초기 스타트업을 찾습니다',
+        r'스타트업을 소개합니다', r'선정된 스타트업', r'선정 기업',
+    ]),
+    # 데모데이·투자유치 : 투자자 앞에서 피칭하거나 만나는 자리
+    ('demoday', [
+        r'데모데이', r'IR', r'피칭', r'투자 상담', r'상담회', r'비즈매칭',
+        r'VC', r'투자자', r'투자 네트워킹', r'무대', r'슈퍼 매치', r'GRAVITY',
+        r'유니콘', r'배틀필드', r'오디션', r'경진대회', r'아이디어톤',
+    ]),
+    # 외부 지원사업·공모 : 정부·지자체·파트너사가 여는 것
+    ('support', [
+        r'지원\s*사업', r'지원사업', r'PoC', r'운영기관', r'지원 안내',
+        r'팁스', r'정부', r'부울경', r'강남구',
+    ]),
+    # 세미나·네트워킹 : 듣고 교류하는 자리 (기본값)
+]
+SUB_FALLBACK = 'session'
+
+
+def classify_sub(title):
+    for sub, pats in SUB_RULES:
+        for p in pats:
+            if re.search(p, title, re.I):
+                return sub
+    return SUB_FALLBACK
+
+
 
 def classify(title):
     for cat, pats in RULES:
@@ -69,14 +103,22 @@ def main():
         d, title, url = line.split('\t')
         y, m, dd = re.findall(r'\d+', d)
         url = url.strip()
-        cat = overrides.get(url) or classify(title)
+        raw = overrides.get(url) or classify(title)
+        cat, _, sub = raw.partition(':')
         if cat not in CATS:
             sys.exit(f'알 수 없는 카테고리 "{cat}" — {url}')
+        if cat == 'open':
+            sub = sub or classify_sub(title)
+            if sub not in SUBS:
+                sys.exit(f'알 수 없는 세부분류 "{sub}" — {url}')
+        else:
+            sub = None
         rows.append({
             'date': f'{y}-{int(m):02d}-{int(dd):02d}',
             'title': title.strip(),
             'url': url,
             'category': cat,
+            'sub': sub,
             'ad': title.strip().startswith(('(광고)', '(재발송)')),
         })
 
@@ -87,6 +129,10 @@ def main():
     print(f'총 {len(rows)}건 (수동 지정 {len(overrides)}건)')
     for k in CATS:
         print(f'  {k:8} {c[k]:3}')
+    sc = Counter(r['sub'] for r in rows if r['sub'])
+    print('  └ open 세부')
+    for k in SUBS:
+        print(f'      {k:9} {sc[k]:3}')
 
 
 if __name__ == '__main__':

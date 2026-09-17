@@ -4,6 +4,7 @@
   "title": "9월 3일 이번 주 목요일, GRAVITY 2026에서 만나요 🚀",
   "url": "https://stib.ee/ywBO",
   "category": "open",
+  "sub": "demoday",
   "ad": false
  },
  {
@@ -11,6 +12,7 @@
   "title": "🚀 대한민국 딥테크의 미래, 4대 과학기술원이 한자리에",
   "url": "https://stib.ee/4I4O",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -18,6 +20,7 @@
   "title": "⏰ 이번 주 일요일 마감! — Spark Claw 1기, 궁금한 점 다 모았어요",
   "url": "https://stib.ee/uqEM",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -25,6 +28,7 @@
   "title": "400번 투자한 대표의 결정 기준 4가지",
   "url": "https://stib.ee/QY8M",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -32,6 +36,7 @@
   "title": "AI를 팀원처럼 쓰는 창업가라면? 스파크클로 1기에 지원하세요!",
   "url": "https://stib.ee/a8yN",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -39,6 +44,7 @@
   "title": "Thank you for waiting! Applications for Spark Claw Cohort 1 are now open 🦀",
   "url": "https://stib.ee/N8yN",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -46,6 +52,7 @@
   "title": "기다려주셔서 감사합니다! Spark Claw 1기 모집이 시작되었습니다 🦀",
   "url": "https://stib.ee/o7yN",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -53,6 +60,7 @@
   "title": "(광고) 강남구 스타트업이라면, 🌏 글로벌 IR 무대에 도전하세요 (~6/5까지)",
   "url": "https://stib.ee/82sN",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -60,6 +68,7 @@
   "title": "1인·소규모 팀 AI 창업가 전문 액셀러레이팅 프로그램 사전 참가 신청 OPEN!",
   "url": "https://stib.ee/CRPN",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -67,6 +76,7 @@
   "title": "스파크레터 4️⃣ 월소식",
   "url": "https://stib.ee/YaNN",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -74,6 +84,7 @@
   "title": "스파크랩이 모두의 창업 운영기관으로 선정되었습니다.🎉",
   "url": "https://stib.ee/Rn8N",
   "category": "open",
+  "sub": "support",
   "ad": false
  },
  {
@@ -81,6 +92,7 @@
   "title": "🐎🔥 2026년의 시작, 스파크레터 1월 소식",
   "url": "https://stib.ee/Z4yK",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -88,6 +100,7 @@
   "title": "국내를 넘어 - 🌏글로벌 시장으로 진출하고 싶다면?",
   "url": "https://stib.ee/0UJK",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -95,6 +108,7 @@
   "title": "스파크레터⚡ 11월 소식",
   "url": "https://stib.ee/jP1K",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -102,6 +116,7 @@
   "title": "(광고) 역대급 라인업의 콘텐츠 x AI 컨퍼런스 STARTUP:CON에 초대합니다!",
   "url": "https://stib.ee/I5JJ",
   "category": "open",
+  "sub": "session",
   "ad": true
  },
  {
@@ -109,6 +124,7 @@
   "title": "(광고) KAIST vs 서울대학교 스타트업 🔥슈퍼 매치",
   "url": "https://stib.ee/MF1J",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -116,6 +132,7 @@
   "title": "(광고)🐫 중동 진출부터 🌏대만 PoC까지",
   "url": "https://stib.ee/zKjI",
   "category": "open",
+  "sub": "support",
   "ad": true
  },
  {
@@ -123,6 +140,7 @@
   "title": "(광고) 🚀스타트업 배틀필드 오디션, 총 상금🏆 1억 원이라고?",
   "url": "https://stib.ee/vkfI",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -130,6 +148,7 @@
   "title": "스파크레터🌴 7월 소식",
   "url": "https://stib.ee/hLTI",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -137,6 +156,7 @@
   "title": "스파크레터💎 6월 소식",
   "url": "https://stib.ee/2T6I",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -144,6 +164,7 @@
   "title": "스파크레터🌹 5월 소식",
   "url": "https://stib.ee/8zgH",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -151,6 +172,7 @@
   "title": "스파크레터🍀 4월 소식",
   "url": "https://stib.ee/3lNH",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -158,6 +180,7 @@
   "title": "🔬Ai 내시경으로 암 조기 진단,🩸혈액으로 대장암 발견! K-바이오의 혁신을 만나는 시간",
   "url": "https://stib.ee/MeAH",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -165,6 +188,7 @@
   "title": "스파크레터🌸 3월 소식",
   "url": "https://stib.ee/cM0H",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -172,6 +196,7 @@
   "title": "2025🍀스파크레터 1월 소식",
   "url": "https://stib.ee/eoEG",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -179,6 +204,7 @@
   "title": "(광고) 총상금 400만원! 🌱ESG 대학원생 아이디어톤 창업경진대회",
   "url": "https://stib.ee/xoKF",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -186,6 +212,7 @@
   "title": "(광고)⏰ 스파크랩 24기 배치 프로그램에 도전하세요! (10/27 접수 마감)",
   "url": "https://stib.ee/QySE",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -193,6 +220,7 @@
   "title": "(광고) 💡사회적 가치를 실현하는 소셜벤처 4개 사를 SOVAC 데모데이 2024에서 만나보세요!",
   "url": "https://stib.ee/vkAE",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -200,6 +228,7 @@
   "title": "(광고) 🕵️스파크랩에서 1:1 Office Hour를 통해 투자로 이어질 팀을 찾고 있어요!",
   "url": "https://stib.ee/W9wD",
   "category": "open",
+  "sub": "session",
   "ad": true
  },
  {
@@ -207,6 +236,7 @@
   "title": "(광고) 🌏 B2B SaaS 스타트업 글로벌 진출 전략🎯 필수 인사이트 공유!",
   "url": "https://stib.ee/ZpDD",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -214,6 +244,7 @@
   "title": "🍉 배치 23기 프로그램, 어떤 기업이 선정됐을까?",
   "url": "https://stib.ee/FVJD",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -221,6 +252,7 @@
   "title": "(광고) 스타트업을 위한 🐪아랍에미리트 진출 전략 포럼, 신청을 서두르세요!",
   "url": "https://stib.ee/KXpC",
   "category": "open",
+  "sub": "session",
   "ad": true
  },
  {
@@ -228,6 +260,7 @@
   "title": "📢 참가 신청하신 사우디 진출 전략 세미나가 내일 개최됩니다. (4/19, 드림플러스)",
   "url": "https://stib.ee/6O1C",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -235,6 +268,7 @@
   "title": "(광고) 기회의 땅 사우디, 스타트업은 어떻게 진출하지? (4/19 사우디 진출 세미나)",
   "url": "https://stib.ee/jLvB",
   "category": "open",
+  "sub": "session",
   "ad": true
  },
  {
@@ -242,6 +276,7 @@
   "title": "(광고)AI에 54조원 푼다는 나라, 사우디 아라비아 진출 전략을 사우디 투자부 국장에게 직접 들어보세요!",
   "url": "https://stib.ee/zslB",
   "category": "open",
+  "sub": "session",
   "ad": true
  },
  {
@@ -249,6 +284,7 @@
   "title": "(광고) 스파크랩과 함께 성장할 초기 스타트업을 찾습니다!",
   "url": "https://stib.ee/8VbB",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -256,6 +292,7 @@
   "title": "(광고) 최대 9천만원 지원! 부울경 ICT 청년 스타트업 지원 사업 모집 오픈🔑",
   "url": "https://stib.ee/UPBB",
   "category": "open",
+  "sub": "support",
   "ad": true
  },
  {
@@ -263,6 +300,7 @@
   "title": "🐲 스파크랩 22기 선정 기업부터 21기 비공개 데모데이 후기까지",
   "url": "https://stib.ee/g6dA",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -270,6 +308,7 @@
   "title": "[스파크랩] 사업운영팀 첫번째 알럼나이 네트워킹(12/8) 참가자 모집 안내",
   "url": "https://stib.ee/quv9",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -277,6 +316,7 @@
   "title": "(광고)대만 스타트업 창업자, VC와 직접 네트워킹 할 수 있는 기회! 스파크랩 타이완과 만나보세요👋",
   "url": "https://stib.ee/vDl9",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -284,6 +324,7 @@
   "title": "(광고)🌠 미래의 혁신을 이끌어갈 부·울·경 지역 내 AI·ICT 분야 청년 창업기업 데모데이에 여러분을 초대합니다.",
   "url": "https://stib.ee/FYi9",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -291,6 +332,7 @@
   "title": "(광고)🤓NEXEED 비즈매칭 데이에서 국내 주요 투자사 10곳을 만나보세요!",
   "url": "https://stib.ee/r2V9",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -298,6 +340,7 @@
   "title": "(광고)💫 2023년 마지막 NEXEED 투자 네트워킹 행사에 초대합니다!",
   "url": "https://stib.ee/92I9",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -305,6 +348,7 @@
   "title": "(재발송) [광고]⚡스파크랩 22기 배치 프로그램 모집이 시작됐습니다!",
   "url": "https://stib.ee/R139",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -312,6 +356,7 @@
   "title": "(광고) 스파크랩 22기 배치프로그램 모집 OPEN! 🌌",
   "url": "https://stib.ee/W0q8",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -319,6 +364,7 @@
   "title": "(광고)🧐팁스 프로그램 준비 어떻게 해야하지? 모두 해결해 드립니다!",
   "url": "https://stib.ee/u0X8",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -326,6 +372,7 @@
   "title": "(광고)🔥글로벌 1위 맥주 기업 AB INBEV와의 PoC 참여 기업 모집 안내",
   "url": "https://stib.ee/I1U8",
   "category": "open",
+  "sub": "support",
   "ad": true
  },
  {
@@ -333,6 +380,7 @@
   "title": "(광고) 🔥주요 VC들과의 1:1 IR 미팅, 지금 신청을 서두르세요! (선착순 마감 임박)",
   "url": "https://stib.ee/24L8",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -340,6 +388,7 @@
   "title": "(광고) 스파크랩 21기 선정 스타트업은?",
   "url": "https://stib.ee/pA88",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -347,6 +396,7 @@
   "title": "(광고) ⛱️올 여름 NEXEED 투자 상담회에서 전문 투자사와의 1:1 미팅을 놓치지 마세요!",
   "url": "https://stib.ee/dM28",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -354,6 +404,7 @@
   "title": "(광고)🔥2023 NEXEED 6월 28일 네트워킹 참여자를 모집합니다!",
   "url": "https://stib.ee/Irs7",
   "category": "open",
+  "sub": "session",
   "ad": true
  },
  {
@@ -361,6 +412,7 @@
   "title": "(광고) 🔥콘텐츠분야 Seed, Pre-A 투자 상담회 참여 기회! 2023 NEXEED 6월 행사를 놓치지 마세요.",
   "url": "https://stib.ee/rDn7",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -368,6 +420,7 @@
   "title": "(광고) 스파크랩 21기 배치프로그램에 지금 지원하세요! (~5.21까지)",
   "url": "https://stib.ee/49g7",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -375,6 +428,7 @@
   "title": "(광고)⚡스파크랩 데모데이 특집 뉴스레터 | 20기 데모데이 아직도 안 보신 분!",
   "url": "https://stib.ee/55W7",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -382,6 +436,7 @@
   "title": "(광고) 글로벌 AI 전쟁 시대, 챗GPT 밖에 모르신다고요?",
   "url": "https://stib.ee/NSS7",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -389,6 +444,7 @@
   "title": "(광고)⚡️스파크랩 21기 배치프로그램 모집 시작! 지금 지원하세요!",
   "url": "https://stib.ee/pbQ7",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -396,6 +452,7 @@
   "title": "(광고) 스파크랩 20기 데모데이에 여러분을 초대합니다!",
   "url": "https://stib.ee/54H7",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -403,6 +460,7 @@
   "title": "(광고) 최대 6억 투자 유치부터 CJ제일제당과의 PoC 기회까지!🚀",
   "url": "https://stib.ee/mU97",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -410,6 +468,7 @@
   "title": "(광고) 전세계 MZ가 매달 1억 6천번 쓰는 앱? 최대 6억 투자 유치, CJ와 PoC 기회",
   "url": "https://stib.ee/aj67",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -417,6 +476,7 @@
   "title": "(광고) 스파크랩 20기 스타트업을 소개합니다!👋🏻",
   "url": "https://stib.ee/nyx6",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -424,6 +484,7 @@
   "title": "국내 최고 공유오피스의 남다른 성장 전략 + 1400억 투자 유치한 베스핀글로벌",
   "url": "https://stib.ee/B2g6",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -431,6 +492,7 @@
   "title": "(광고)🦄 부산에서 탄생할 미래의 유니콘을 만나는 무대!",
   "url": "https://stib.ee/cDX6",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -438,6 +500,7 @@
   "title": "(광고) 2022 메가 콘텐츠 랩 데모데이를 온라인 생중계로 만나보세요! 🙌",
   "url": "https://stib.ee/7iR6",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -445,6 +508,7 @@
   "title": "(광고)⚡스파크랩 데모데이 D-6, 사전 등록을 서두르세요!",
   "url": "https://stib.ee/3hR6",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -452,6 +516,7 @@
   "title": "(광고)⚡웹3.0가 패션, 엔터테인먼트를 어떻게 바꾸고 있는지 궁금하다면?",
   "url": "https://stib.ee/1hR6",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -459,6 +524,7 @@
   "title": "(광고)⚡3년 만에 스파크랩 데모데이를 오프라인에서 + 스랩 프로그램 맛보기",
   "url": "https://stib.ee/0hR6",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -466,6 +532,7 @@
   "title": "(광고)스파크랩 프로그램, 진짜 도움 돼? 미리 체험해볼 수 있다면?😲",
   "url": "https://stib.ee/zgR6",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -473,6 +540,7 @@
   "title": "(광고)⚡️스파크랩 20기 모집이 시작되었습니다!",
   "url": "https://stib.ee/ygR6",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -480,6 +548,7 @@
   "title": "(광고)⚡스파크랩 10주년 데모데이 사전등록 OPEN!",
   "url": "https://stib.ee/h5B6",
   "category": "monthly",
+  "sub": null,
   "ad": true
  },
  {
@@ -487,6 +556,7 @@
   "title": "⚡올해로 10살이 된 스파크랩을 축하해주세요!",
   "url": "https://stib.ee/EE56",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -494,6 +564,7 @@
   "title": "(광고) 실감 콘텐츠의 트렌드를 엿볼 수 있는 기회 👀",
   "url": "https://stib.ee/PM26",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -501,6 +572,7 @@
   "title": "⚡Looking for attention ~ 스파크랩 & 포트폴리오 소식 전해드려요",
   "url": "https://stib.ee/OWz5",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -508,6 +580,7 @@
   "title": "소득, 담보가 없는 청년들은 돈을 어디서 빌리나요?",
   "url": "https://stib.ee/jas5",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -515,6 +588,7 @@
   "title": "(광고) 스윙비 최서진 대표의 IR 미팅 꿀팁 + 부산 스타트업 이벤트 안내",
   "url": "https://stib.ee/SRm5",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -522,6 +596,7 @@
   "title": "⚡스파크랩 19기 선정 소식 + 초기 스타트업 B2B 세일즈 노하우",
   "url": "https://stib.ee/qTi5",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -529,6 +604,7 @@
   "title": "⚡ 6월 마지막주 스파크랩 소식 #고객이야기듣기 #하계워크샵",
   "url": "https://stib.ee/LiZ5",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -536,6 +612,7 @@
   "title": "(광고) 콘텐츠 스타트업 시작과 성장 스파크랩과 함께 하세요🙌",
   "url": "https://stib.ee/1XQ5",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -543,6 +620,7 @@
   "title": "⚡강남구 소재 스타트업 & 실감 콘텐츠 스타트업 지원 안내",
   "url": "https://stib.ee/mIP5",
   "category": "open",
+  "sub": "support",
   "ad": false
  },
  {
@@ -550,6 +628,7 @@
   "title": "⚡스파크랩 데모데이 아직도 안 보신 분! 🙋🏻‍♀🙋‍♂",
   "url": "https://stib.ee/1FI5",
   "category": "open",
+  "sub": "demoday",
   "ad": false
  },
  {
@@ -557,6 +636,7 @@
   "title": "(광고) 창업자분들의 고민을 들려주세요!👂🏻",
   "url": "https://stib.ee/h985",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -564,6 +644,7 @@
   "title": "(광고)⚡ 드디어 18기 데모데이 접수 Start!",
   "url": "https://stib.ee/0A35",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -571,6 +652,7 @@
   "title": "💌 스파크랩이 19기 기업을 모집합니다!",
   "url": "https://stib.ee/Dex4",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -578,6 +660,7 @@
   "title": "(광고)⚡️식품 산업을 혁신할 프론티어를 찾습니다!",
   "url": "https://stib.ee/Mim4",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -585,6 +668,7 @@
   "title": "⚡스파크랩 18기 프로그램에 선정된 스타트업은?",
   "url": "https://stib.ee/7yg4",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -592,6 +676,7 @@
   "title": "(광고)⚡스파크랩 부산특집 (feat. 데모데이, 비스타트업스테이션)",
   "url": "https://stib.ee/Cka4",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -599,6 +684,7 @@
   "title": "⚡ 2021년 마지막 '스파크레터'가 도착했습니다",
   "url": "https://stib.ee/e8U4",
   "category": "monthly",
+  "sub": null,
   "ad": false
  },
  {
@@ -606,6 +692,7 @@
   "title": "⚡미국에서 진짜 잘 나가는 한국인 창업자의 비밀",
   "url": "https://stib.ee/O1N4",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -613,6 +700,7 @@
   "title": "⚡TO. 후배 스타트업들에게 하고 싶은 이야기",
   "url": "https://stib.ee/qEL4",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -620,6 +708,7 @@
   "title": "(광고) 💡 올해 최고의 ESG 스타트업은 누구?",
   "url": "https://stib.ee/GhH4",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -627,6 +716,7 @@
   "title": "(광고)🚀라이프 스타일 분야를 혁신할 10개의 콘텐츠 스타트업을 소개합니다! feat. 2021 뉴 콘텐츠랩 데모데이",
   "url": "https://stib.ee/FeF4",
   "category": "open",
+  "sub": "batch",
   "ad": true
  },
  {
@@ -634,6 +724,7 @@
   "title": "🌱 창업에서 4천억원 밸류 상장까지👑, 원티드랩 공동창업자들이 밝히는 비하인드 스토리",
   "url": "https://stib.ee/7R64",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -641,6 +732,7 @@
   "title": "🚀K-스타트업의 북미 정복기: 센드버드, 래디쉬, 미미박스 창업자가 한 자리에 모입니다!",
   "url": "https://stib.ee/Et24",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -648,6 +740,7 @@
   "title": "📢스파크랩과 함께 성장할 18기 스타트업을 모집합니다🔥",
   "url": "https://stib.ee/XNz3",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -655,6 +748,7 @@
   "title": "요즘 친구들은 말이야~🤔 인스턴트타투 김남숙 대표가 말하는 GenZ 특징 3가지, 스파크레터와 함께 알아보아요!",
   "url": "https://stib.ee/Vov3",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -662,6 +756,7 @@
   "title": "[스파크레터] 코스닥 데뷔 '따상' 성공한 원티드랩, 그 여정의 시작🚀",
   "url": "https://stib.ee/43s3",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -669,6 +764,7 @@
   "title": "[스파크레터] 랜선으로 대만 여행! 스파크랩 타이베이 데모데이를 실시간으로 즐겨보세요! D-1🔥",
   "url": "https://stib.ee/Nxl3",
   "category": "open",
+  "sub": "demoday",
   "ad": false
  },
  {
@@ -676,6 +772,7 @@
   "title": "[스파크레터] 스타트업 꿀팁, 잘 나가는 창업자들이 아낌없이 다 퍼드립니다! feat. 스파크랩스쿨📺",
   "url": "https://stib.ee/Wwj3",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -683,6 +780,7 @@
   "title": "(광고)[스파크레터] 패션&라이프스타일 초기 스타트업 투자 유치 팁 대방출! feat.피치스, 클로젯셰어",
   "url": "https://stib.ee/Fvh3",
   "category": "insight",
+  "sub": null,
   "ad": true
  },
  {
@@ -690,6 +788,7 @@
   "title": "[스파크레터] 스파크랩 17기 프로그램에 선정된 12개의 스타트업을 소개합니다!🎉",
   "url": "https://stib.ee/P7b3",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -697,6 +796,7 @@
   "title": "[스파크레터] 스타트업의 갈 길을 밝혀주는 북극성이 있다고요? feat.원티드 이복기 대표",
   "url": "https://stib.ee/aqX3",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -704,6 +804,7 @@
   "title": "[스파크레터] 6조 이상 커질 반려동물 시장, 국내 최초 <펫 클라우드> 협약체로 승부! 🐶🐱",
   "url": "https://stib.ee/75T3",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -711,6 +812,7 @@
   "title": "[스파크레터] 5개월 만에 100만 다운로드 달성? 쌉가능! #NUX #클럽하우스",
   "url": "https://stib.ee/5vP3",
   "category": "open",
+  "sub": "session",
   "ad": false
  },
  {
@@ -718,6 +820,7 @@
   "title": "[스파크레터] 16기 데모데이 특집 + 그로스 해킹 클럽하우스 예고",
   "url": "https://stib.ee/57M3",
   "category": "open",
+  "sub": "batch",
   "ad": false
  },
  {
@@ -725,6 +828,7 @@
   "title": "(광고)[스파크랩] ESG 분야 가장 핫한 스타트업을 만나보세요! #푸드업사이클링 #16기데모데이",
   "url": "https://stib.ee/tDC3",
   "category": "open",
+  "sub": "demoday",
   "ad": true
  },
  {
@@ -732,6 +836,7 @@
   "title": "[스파크레터] 세계 최초 BTS와 협업한 스타트업 여성 창업자를 소개합니다!🔥",
   "url": "https://stib.ee/pM73",
   "category": "insight",
+  "sub": null,
   "ad": false
  },
  {
@@ -739,6 +844,7 @@
   "title": "[스파크랩 뉴스레터] 오늘 밤 클럽하우스에서 만나요! 👋",
   "url": "https://stib.ee/I343",
   "category": "open",
+  "sub": "session",
   "ad": false
  }
 ]
