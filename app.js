@@ -1,5 +1,5 @@
 const STEP = 6;          // Load more 한 번에 몇 개씩
-const FIRST = { all: 12 }; // 섹션별 처음 보여줄 개수 (기본 STEP)
+const FIRST = {};            // 섹션별 처음 보여줄 개수 (기본 STEP)
 
 const LABEL = {
   insight: '성장 인사이트',

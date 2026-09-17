@@ -11,6 +11,7 @@ body{
   line-height:1.6; -webkit-font-smoothing:antialiased;
 }
 a{color:inherit}
+body{position:relative; z-index:0}
 
 /* ── 왼쪽 사이드바 ──────────────────── */
 .side{
@@ -50,13 +51,13 @@ a{color:inherit}
 
 /* ── 배경 워터마크 ─────────────────── */
 .watermark{
-  position:fixed; inset:0; z-index:0; pointer-events:none;
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
   display:flex; align-items:center; justify-content:center;
   padding-left:var(--side); overflow:hidden;
 }
 .watermark img{
-  width:min(120vw, 1500px); max-width:none; height:auto;
-  opacity:.15; filter:saturate(1.35);
+  width:min(165vw, 2400px); max-width:none; height:auto;
+  opacity:.07; filter:saturate(1.1);
 }
 @media (max-width:900px){ .watermark{display:none} }
 
