@@ -1,4 +1,11 @@
-# 규칙으로 잘못 걸리는 개별 호를 여기서 직접 지정한다.
-# 형식: 링크<TAB>카테고리   (monthly / insight / event / program)
-# 규칙보다 우선하므로, 화면에서 이상한 게 보이면 여기 한 줄 추가하면 된다.
-https://stib.ee/h5B6	event
+# 규칙으로 잘못 걸리는 개별 호를 직접 지정한다. 규칙보다 우선한다.
+# 형식: 링크<TAB>카테고리   (monthly / insight / open)
+
+# 인사이트처럼 보이지만 실제로는 참가 모집 건
+https://stib.ee/zslB	open
+https://stib.ee/zKjI	open
+https://stib.ee/MeAH	open
+https://stib.ee/0UJK	open
+
+# 월간 정기호가 아니라 개별 소식 건
+https://stib.ee/Rn8N	open

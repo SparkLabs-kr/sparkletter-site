@@ -4,8 +4,7 @@ const FIRST = {};            // 섹션별 처음 보여줄 개수 (기본 STEP)
 const LABEL = {
   monthly: '스파크랩 월간호',
   insight: '스파크랩만의 인사이트',
-  event: '행사·데모데이',
-  program: '프로그램·모집',
+  open: '모집·행사',
 };
 
 const state = {}; // { [cat]: shownCount }

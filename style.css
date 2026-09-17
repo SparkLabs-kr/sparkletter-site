@@ -89,8 +89,7 @@ body{position:relative; z-index:0}
 }
 .card:hover{transform:translateY(-3px); filter:brightness(1.07)}
 .card--insight{--c:var(--pink)}
-.card--event  {--c:var(--blue)}
-.card--program{--c:var(--green)}
+.card--open   {--c:var(--green)}
 .card--monthly{--c:var(--orange)}
 .chip{
   align-self:flex-start; font-size:10.5px; font-weight:700;
