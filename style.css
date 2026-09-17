@@ -1,20 +1,20 @@
-/* 2026 웜 뉴트럴 라이트 팔레트
-   - 순백 대신 본(bone), 검정 대신 차콜 — 눈부심을 줄인다
+/* 쿨 뉴트럴 라이트 팔레트
+   - 웜 베이지는 요즘 AI가 뽑는 화면의 전형이라 피한다. 살짝 푸른 기가 도는 near-white.
    - 액센트(브랜드 핑크)는 넓게 칠하지 않고 행동·강조에만 쓴다 */
 :root{
-  --bg:#F6F4EF;        /* 본 — 페이지 바탕 */
+  --bg:#F7F8FA;        /* 쿨 near-white — 페이지 바탕 */
   --surface:#FFFFFF;   /* 카드 등 올라온 면 */
-  --line:#E4E0D7;
-  --line-2:#D6D1C6;
-  --text:#23211E;      /* 차콜 */
-  --muted:#756F67;
+  --line:#E6E8EC;
+  --line-2:#D3D7DE;
+  --text:#14161A;      /* 잉크 */
+  --muted:#6B7280;
   --accent:#ED1968;    /* 스파크랩 핑크 */
   --accent-ink:#FFFFFF;
 
   /* 카테고리 색 — 칩에만 쓴다 */
   --c-insight:#C2185B;
-  --c-open:#2E6F57;
-  --c-monthly:#B26A12;
+  --c-open:#1F6F5C;
+  --c-monthly:#B45309;
 
   --side:268px;
 }
@@ -44,7 +44,7 @@ a{color:inherit}
   color:var(--muted); font-size:14.5px; letter-spacing:.02em;
 }
 .nav__main span{font-size:16px; line-height:1}
-.nav__main:hover{background:#EDEAE2; color:var(--text)}
+.nav__main:hover{background:#ECEEF2; color:var(--text)}
 .nav__main[aria-current="page"]{background:var(--text); color:var(--bg); font-weight:700}
 
 /* home 아래 하위 탭 */
@@ -56,7 +56,7 @@ a{color:inherit}
   padding:6px 10px; border-radius:7px; text-decoration:none;
   color:var(--muted); font-size:12.5px;
 }
-.side__subs a:hover{background:#EDEAE2; color:var(--text)}
+.side__subs a:hover{background:#ECEEF2; color:var(--text)}
 
 .side__arc{
   margin-top:auto; font-size:12px; color:var(--muted);
@@ -109,11 +109,11 @@ a{color:inherit}
 .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
 .card{
   display:flex; flex-direction:column; text-decoration:none;
-  border-radius:14px; padding:18px 17px 15px; min-height:186px;
+  border-radius:10px; padding:18px 17px 15px; min-height:186px;
   background:var(--surface); border:1px solid var(--line);
   transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
-.card:hover{transform:translateY(-3px); box-shadow:0 8px 20px rgba(35,33,30,.08); border-color:var(--line-2)}
+.card:hover{transform:translateY(-3px); box-shadow:0 6px 16px rgba(20,22,26,.07); border-color:var(--line-2)}
 .chip{
   align-self:flex-start; font-size:10.5px; font-weight:700; letter-spacing:.01em;
   padding:4px 9px; border-radius:6px; margin-bottom:13px;
@@ -141,7 +141,7 @@ a{color:inherit}
 .lede{font-size:26px; margin:0 0 14px; letter-spacing:-.02em}
 .sub{color:var(--muted); font-size:14px; margin:0 0 28px}
 .bullets{list-style:none; padding:0; margin:0 0 32px; font-size:14px}
-.bullets li{padding:12px 0; border-bottom:1px solid var(--line); color:#403C37}
+.bullets li{padding:12px 0; border-bottom:1px solid var(--line); color:#374151}
 .bullets b{color:var(--text)}
 .cta{
   display:block; text-align:center; padding:16px; border-radius:10px;
