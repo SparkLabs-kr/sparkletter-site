@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>스파크레터 — 팔레트 후보 비교</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo",sans-serif;
+       background:#0c0c0e; color:#eee; line-height:1.6}
+  .page{max-width:1120px; margin:0 auto; padding:40px 24px 80px}
+  .intro h1{font-size:24px; margin:0 0 8px}
+  .intro p{color:#9a9aa2; font-size:14px; margin:0 0 40px}
+
+  /* 각 후보 블록 */
+  .opt{border-radius:18px; overflow:hidden; margin-bottom:40px; border:1px solid #26262b}
+  .opt__bar{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+            padding:16px 22px; background:#141418; border-bottom:1px solid #26262b}
+  .opt__bar b{font-size:15px}
+  .opt__bar span{font-size:12.5px; color:#8e8e96}
+  .sw{display:flex; gap:5px; margin-left:auto}
+  .sw i{width:20px; height:20px; border-radius:5px; display:block; border:1px solid rgba(255,255,255,.12)}
+
+  /* 데모 영역 — 여기부터 후보 팔레트 적용 */
+  .demo{padding:26px 22px 28px; background:var(--bg); color:var(--fg)}
+  .demo h2{font-size:17px; margin:0 0 4px; color:var(--fg)}
+  .demo .lede{font-size:12.5px; color:var(--dim); margin:0 0 18px}
+  .chips{display:flex; gap:7px; flex-wrap:wrap; margin-bottom:16px}
+  .fchip{font-size:11.5px; padding:6px 12px; border-radius:999px;
+         border:1px solid var(--line); color:var(--dim); background:transparent}
+  .fchip.on{background:var(--accent); color:var(--onAccent); border-color:var(--accent); font-weight:700}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:13px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px;
+        padding:15px 14px 13px; min-height:132px; display:flex; flex-direction:column}
+  .card .tag{align-self:flex-start; font-size:10px; font-weight:700; padding:3px 8px;
+             border-radius:5px; margin-bottom:10px; background:var(--tagBg); color:var(--tagFg)}
+  .card .t{font-size:13px; font-weight:700; line-height:1.45; flex:1; color:var(--fg)}
+  .card .d{margin-top:10px; font-size:10.5px; color:var(--dim)}
+  .cta{display:inline-block; margin-top:16px; padding:9px 16px; border-radius:8px;
+       background:var(--accent); color:var(--onAccent); font-size:12.5px; font-weight:700}
+
+  /* ───────── A. Warm Charcoal (2026 다크 표준) ───────── */
+  .a{--bg:#17161A; --card:#201F25; --line:#2E2C35; --fg:#EDEAE4; --dim:#9A968E;
+     --accent:#E2714A; --onAccent:#1A1113; --tagBg:#2E2C35; --tagFg:#D9D4CC}
+  /* ───────── B. Zinc Tech (테크 제품 표준) ───────── */
+  .b{--bg:#101215; --card:#181B20; --line:#262A31; --fg:#E6E9EE; --dim:#8B939F;
+     --accent:#4DD4C0; --onAccent:#06120F; --tagBg:#262A31; --tagFg:#CBD3DD}
+  /* ───────── C. Cloud Dancer (라이트, 팬톤 26 올해의 색) ───────── */
+  .c{--bg:#F6F4EF; --card:#FFFFFF; --line:#E3DFD6; --fg:#23211E; --dim:#77716A;
+     --accent:#1F6F63; --onAccent:#FFFFFF; --tagBg:#EDE9E1; --tagFg:#4A453E}
+  /* ───────── D. Clay + Electric (어스톤 + 디지털 대비) ───────── */
+  .d{--bg:#1B1A16; --card:#24231D; --line:#35332A; --fg:#EFEBE0; --dim:#9C968A;
+     --accent:#FF5C39; --onAccent:#1B1A16; --tagBg:#3A4A3C; --tagFg:#D6E3D3}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="intro">
+    <h1>스파크레터 — 팔레트 후보 4종</h1>
+    <p>같은 화면·같은 콘텐츠에 팔레트만 바꿔 끼운 것입니다. 실제 카드 문구를 그대로 썼어요.</p>
+  </div>
+
+  <!-- A -->
+  <section class="opt">
+    <div class="opt__bar">
+      <b>A. Warm Charcoal</b>
+      <span>순수 검정 대신 따뜻한 차콜 · 표면이 위로 갈수록 밝아짐 · 테라코타 액센트</span>
+      <div class="sw"><i style="background:#17161A"></i><i style="background:#201F25"></i><i style="background:#EDEAE4"></i><i style="background:#E2714A"></i></div>
+    </div>
+    <div class="demo a">
+      <h2>🚀 모집·행사</h2>
+      <p class="lede">지원하거나 참가하는 모든 기회</p>
+      <div class="chips">
+        <span class="fchip on">전체 68</span><span class="fchip">배치·액셀러레이팅 27</span><span class="fchip">데모데이·투자유치 22</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="tag">데모데이·투자유치</span><span class="t">9월 3일 이번 주 목요일, GRAVITY 2026에서 만나요 🚀</span><span class="d">2026/09/01</span></div>
+        <div class="card"><span class="tag">배치·액셀러레이팅</span><span class="t">AI를 팀원처럼 쓰는 창업가라면? 스파크클로 1기에 지원하세요!</span><span class="d">2026/06/08</span></div>
+        <div class="card"><span class="tag">세미나·네트워킹</span><span class="t">국내를 넘어 — 🌏글로벌 시장으로 진출하고 싶다면?</span><span class="d">2025/11/28</span></div>
+      </div>
+      <span class="cta">구독하기</span>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="opt">
+    <div class="opt__bar">
+      <b>B. Zinc Tech</b>
+      <span>차가운 슬레이트·징크 뉴트럴 · 민트/틸 액센트 · 테크 제품에서 가장 흔한 조합</span>
+      <div class="sw"><i style="background:#101215"></i><i style="background:#181B20"></i><i style="background:#E6E9EE"></i><i style="background:#4DD4C0"></i></div>
+    </div>
+    <div class="demo b">
+      <h2>🚀 모집·행사</h2>
+      <p class="lede">지원하거나 참가하는 모든 기회</p>
+      <div class="chips">
+        <span class="fchip on">전체 68</span><span class="fchip">배치·액셀러레이팅 27</span><span class="fchip">데모데이·투자유치 22</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="tag">데모데이·투자유치</span><span class="t">9월 3일 이번 주 목요일, GRAVITY 2026에서 만나요 🚀</span><span class="d">2026/09/01</span></div>
+        <div class="card"><span class="tag">배치·액셀러레이팅</span><span class="t">AI를 팀원처럼 쓰는 창업가라면? 스파크클로 1기에 지원하세요!</span><span class="d">2026/06/08</span></div>
+        <div class="card"><span class="tag">세미나·네트워킹</span><span class="t">국내를 넘어 — 🌏글로벌 시장으로 진출하고 싶다면?</span><span class="d">2025/11/28</span></div>
+      </div>
+      <span class="cta">구독하기</span>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="opt">
+    <div class="opt__bar">
+      <b>C. Cloud Dancer (라이트)</b>
+      <span>팬톤 2026 올해의 색 · 본·샌드 배경 + 차콜 텍스트 + 딥틸 액센트</span>
+      <div class="sw"><i style="background:#F6F4EF"></i><i style="background:#FFFFFF"></i><i style="background:#23211E"></i><i style="background:#1F6F63"></i></div>
+    </div>
+    <div class="demo c">
+      <h2>🚀 모집·행사</h2>
+      <p class="lede">지원하거나 참가하는 모든 기회</p>
+      <div class="chips">
+        <span class="fchip on">전체 68</span><span class="fchip">배치·액셀러레이팅 27</span><span class="fchip">데모데이·투자유치 22</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="tag">데모데이·투자유치</span><span class="t">9월 3일 이번 주 목요일, GRAVITY 2026에서 만나요 🚀</span><span class="d">2026/09/01</span></div>
+        <div class="card"><span class="tag">배치·액셀러레이팅</span><span class="t">AI를 팀원처럼 쓰는 창업가라면? 스파크클로 1기에 지원하세요!</span><span class="d">2026/06/08</span></div>
+        <div class="card"><span class="tag">세미나·네트워킹</span><span class="t">국내를 넘어 — 🌏글로벌 시장으로 진출하고 싶다면?</span><span class="d">2025/11/28</span></div>
+      </div>
+      <span class="cta">구독하기</span>
+    </div>
+  </section>
+
+  <!-- D -->
+  <section class="opt">
+    <div class="opt__bar">
+      <b>D. Clay + Electric</b>
+      <span>흙빛 올리브·클레이 바탕에 강한 디지털 코랄 하나 · 대비로 시선 잡기</span>
+      <div class="sw"><i style="background:#1B1A16"></i><i style="background:#3A4A3C"></i><i style="background:#EFEBE0"></i><i style="background:#FF5C39"></i></div>
+    </div>
+    <div class="demo d">
+      <h2>🚀 모집·행사</h2>
+      <p class="lede">지원하거나 참가하는 모든 기회</p>
+      <div class="chips">
+        <span class="fchip on">전체 68</span><span class="fchip">배치·액셀러레이팅 27</span><span class="fchip">데모데이·투자유치 22</span>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="tag">데모데이·투자유치</span><span class="t">9월 3일 이번 주 목요일, GRAVITY 2026에서 만나요 🚀</span><span class="d">2026/09/01</span></div>
+        <div class="card"><span class="tag">배치·액셀러레이팅</span><span class="t">AI를 팀원처럼 쓰는 창업가라면? 스파크클로 1기에 지원하세요!</span><span class="d">2026/06/08</span></div>
+        <div class="card"><span class="tag">세미나·네트워킹</span><span class="t">국내를 넘어 — 🌏글로벌 시장으로 진출하고 싶다면?</span><span class="d">2025/11/28</span></div>
+      </div>
+      <span class="cta">구독하기</span>
+    </div>
+  </section>
+</div>
+</body>
+</html>
