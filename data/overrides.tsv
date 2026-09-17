@@ -1,0 +1,4 @@
+# 규칙으로 잘못 걸리는 개별 호를 여기서 직접 지정한다.
+# 형식: 링크<TAB>카테고리   (monthly / insight / event / program)
+# 규칙보다 우선하므로, 화면에서 이상한 게 보이면 여기 한 줄 추가하면 된다.
+https://stib.ee/h5B6	event

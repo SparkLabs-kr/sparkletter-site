@@ -2,10 +2,10 @@ const STEP = 6;          // Load more 한 번에 몇 개씩
 const FIRST = {};            // 섹션별 처음 보여줄 개수 (기본 STEP)
 
 const LABEL = {
-  insight: '성장 인사이트',
+  monthly: '스파크랩 월간호',
+  insight: '스파크랩만의 인사이트',
   event: '행사·데모데이',
   program: '프로그램·모집',
-  news: '스파크랩 뉴스',
 };
 
 const state = {}; // { [cat]: shownCount }
@@ -71,7 +71,8 @@ function init() {
   });
 }
 
-fetch('articles.json')
+// no-cache: 새 호를 올렸을 때 방문자가 옛 목록을 보지 않도록 매번 서버에 확인한다
+fetch('articles.json', { cache: 'no-cache' })
   .then((r) => r.json())
   .then((d) => {
     all = d;

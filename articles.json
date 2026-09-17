@@ -66,35 +66,35 @@
   "date": "2026-04-24",
   "title": "스파크레터 4️⃣ 월소식",
   "url": "https://stib.ee/YaNN",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2026-04-09",
   "title": "스파크랩이 모두의 창업 운영기관으로 선정되었습니다.🎉",
   "url": "https://stib.ee/Rn8N",
-  "category": "program",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2026-01-16",
   "title": "🐎🔥 2026년의 시작, 스파크레터 1월 소식",
   "url": "https://stib.ee/Z4yK",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2025-11-28",
   "title": "국내를 넘어 - 🌏글로벌 시장으로 진출하고 싶다면?",
   "url": "https://stib.ee/0UJK",
-  "category": "news",
+  "category": "insight",
   "ad": false
  },
  {
   "date": "2025-11-06",
   "title": "스파크레터⚡ 11월 소식",
   "url": "https://stib.ee/jP1K",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
@@ -115,7 +115,7 @@
   "date": "2025-07-30",
   "title": "(광고)🐫 중동 진출부터 🌏대만 PoC까지",
   "url": "https://stib.ee/zKjI",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
@@ -129,56 +129,56 @@
   "date": "2025-07-11",
   "title": "스파크레터🌴 7월 소식",
   "url": "https://stib.ee/hLTI",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2025-06-16",
   "title": "스파크레터💎 6월 소식",
   "url": "https://stib.ee/2T6I",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2025-05-16",
   "title": "스파크레터🌹 5월 소식",
   "url": "https://stib.ee/8zgH",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2025-04-22",
   "title": "스파크레터🍀 4월 소식",
   "url": "https://stib.ee/3lNH",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2025-04-08",
   "title": "🔬Ai 내시경으로 암 조기 진단,🩸혈액으로 대장암 발견! K-바이오의 혁신을 만나는 시간",
   "url": "https://stib.ee/MeAH",
-  "category": "event",
+  "category": "insight",
   "ad": false
  },
  {
   "date": "2025-03-27",
   "title": "스파크레터🌸 3월 소식",
   "url": "https://stib.ee/cM0H",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2025-01-24",
   "title": "2025🍀스파크레터 1월 소식",
   "url": "https://stib.ee/eoEG",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2024-11-22",
   "title": "(광고) 총상금 400만원! 🌱ESG 대학원생 아이디어톤 창업경진대회",
   "url": "https://stib.ee/xoKF",
-  "category": "program",
+  "category": "event",
   "ad": true
  },
  {
@@ -241,7 +241,7 @@
   "date": "2024-04-01",
   "title": "(광고)AI에 54조원 푼다는 나라, 사우디 아라비아 진출 전략을 사우디 투자부 국장에게 직접 들어보세요!",
   "url": "https://stib.ee/zslB",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
@@ -318,7 +318,7 @@
   "date": "2023-08-17",
   "title": "(광고)🧐팁스 프로그램 준비 어떻게 해야하지? 모두 해결해 드립니다!",
   "url": "https://stib.ee/u0X8",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
@@ -332,7 +332,7 @@
   "date": "2023-08-03",
   "title": "(광고) 🔥주요 VC들과의 1:1 IR 미팅, 지금 신청을 서두르세요! (선착순 마감 임박)",
   "url": "https://stib.ee/24L8",
-  "category": "news",
+  "category": "event",
   "ad": true
  },
  {
@@ -402,21 +402,21 @@
   "date": "2023-03-02",
   "title": "(광고) 최대 6억 투자 유치부터 CJ제일제당과의 PoC 기회까지!🚀",
   "url": "https://stib.ee/mU97",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
   "date": "2023-02-23",
   "title": "(광고) 전세계 MZ가 매달 1억 6천번 쓰는 앱? 최대 6억 투자 유치, CJ와 PoC 기회",
   "url": "https://stib.ee/aj67",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
   "date": "2023-02-03",
   "title": "(광고) 스파크랩 20기 스타트업을 소개합니다!👋🏻",
   "url": "https://stib.ee/nyx6",
-  "category": "news",
+  "category": "program",
   "ad": true
  },
  {
@@ -486,21 +486,21 @@
   "date": "2022-09-15",
   "title": "⚡올해로 10살이 된 스파크랩을 축하해주세요!",
   "url": "https://stib.ee/EE56",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2022-09-08",
   "title": "(광고) 실감 콘텐츠의 트렌드를 엿볼 수 있는 기회 👀",
   "url": "https://stib.ee/PM26",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
   "date": "2022-09-02",
   "title": "⚡Looking for attention ~ 스파크랩 & 포트폴리오 소식 전해드려요",
   "url": "https://stib.ee/OWz5",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
@@ -514,7 +514,7 @@
   "date": "2022-08-04",
   "title": "(광고) 스윙비 최서진 대표의 IR 미팅 꿀팁 + 부산 스타트업 이벤트 안내",
   "url": "https://stib.ee/SRm5",
-  "category": "insight",
+  "category": "event",
   "ad": true
  },
  {
@@ -528,14 +528,14 @@
   "date": "2022-06-30",
   "title": "⚡ 6월 마지막주 스파크랩 소식 #고객이야기듣기 #하계워크샵",
   "url": "https://stib.ee/LiZ5",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
   "date": "2022-06-07",
   "title": "(광고) 콘텐츠 스타트업 시작과 성장 스파크랩과 함께 하세요🙌",
   "url": "https://stib.ee/1XQ5",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
@@ -598,7 +598,7 @@
   "date": "2021-12-29",
   "title": "⚡ 2021년 마지막 '스파크레터'가 도착했습니다",
   "url": "https://stib.ee/e8U4",
-  "category": "news",
+  "category": "monthly",
   "ad": false
  },
  {
@@ -619,7 +619,7 @@
   "date": "2021-11-17",
   "title": "(광고) 💡 올해 최고의 ESG 스타트업은 누구?",
   "url": "https://stib.ee/GhH4",
-  "category": "news",
+  "category": "insight",
   "ad": true
  },
  {
@@ -640,7 +640,7 @@
   "date": "2021-09-30",
   "title": "🚀K-스타트업의 북미 정복기: 센드버드, 래디쉬, 미미박스 창업자가 한 자리에 모입니다!",
   "url": "https://stib.ee/Et24",
-  "category": "news",
+  "category": "event",
   "ad": false
  },
  {
@@ -661,7 +661,7 @@
   "date": "2021-08-20",
   "title": "[스파크레터] 코스닥 데뷔 '따상' 성공한 원티드랩, 그 여정의 시작🚀",
   "url": "https://stib.ee/43s3",
-  "category": "news",
+  "category": "insight",
   "ad": false
  },
  {
@@ -703,7 +703,7 @@
   "date": "2021-05-31",
   "title": "[스파크레터] 6조 이상 커질 반려동물 시장, 국내 최초 <펫 클라우드> 협약체로 승부! 🐶🐱",
   "url": "https://stib.ee/75T3",
-  "category": "news",
+  "category": "insight",
   "ad": false
  },
  {
@@ -731,7 +731,7 @@
   "date": "2021-03-09",
   "title": "[스파크레터] 세계 최초 BTS와 협업한 스타트업 여성 창업자를 소개합니다!🔥",
   "url": "https://stib.ee/pM73",
-  "category": "news",
+  "category": "insight",
   "ad": false
  },
  {

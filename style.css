@@ -91,7 +91,7 @@ body{position:relative; z-index:0}
 .card--insight{--c:var(--pink)}
 .card--event  {--c:var(--blue)}
 .card--program{--c:var(--green)}
-.card--news   {--c:var(--orange)}
+.card--monthly{--c:var(--orange)}
 .chip{
   align-self:flex-start; font-size:10.5px; font-weight:700;
   padding:4px 9px; border-radius:6px; margin-bottom:13px;

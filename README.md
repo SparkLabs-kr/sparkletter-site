@@ -25,34 +25,37 @@
 `mockups/`, `data/`는 정적 호스팅이 무시하므로 같이 두어도 안전하다.
 
 ## articles.json 갱신
-`data/archive.tsv`에 한 줄(날짜<TAB>제목<TAB>링크) 추가 후:
+
+`data/archive.tsv`에 한 줄(날짜<TAB>제목<TAB>링크) 추가 후 `python3 data/classify.py`.
+
+### 카테고리 (4종)
+| 키 | 화면 이름 | 기준 |
+|---|---|---|
+| monthly | 📅 스파크랩 월간호 | 정기 발행호(N월 소식) + 스파크랩 자체 소식(선정·주년 등) |
+| insight | 💡 스파크랩만의 인사이트 | 읽을거리 — 노하우·인터뷰·전략·트렌드 (**기본값**) |
+| event | 🎤 행사·데모데이 | 특정 일시에 열리는 자리 — 데모데이·세미나·네트워킹·IR |
+| program | 🚀 프로그램·모집 | 지원해서 뽑히는 것 — 배치 N기·지원사업·PoC 모집 |
+
+규칙은 `data/classify.py`의 `RULES`에 있고 **위에서부터 먼저 걸리는 쪽이 이긴다**
+(monthly → event → program → 나머지는 insight).
+
+규칙으로 안 되는 개별 건은 **`data/overrides.tsv`** 에 `링크<TAB>카테고리` 한 줄을 추가한다.
+규칙보다 우선하므로 정규식을 건드리지 않고 한 건만 고칠 수 있다.
+
+> 과거에 'news'가 폴백 통이어서 월간호·인터뷰·행사가 뒤섞였다. 지금은 insight가 폴백이고
+> monthly는 명시적 규칙으로만 들어간다.
+
+
+## 새 호가 나가면 — 수동 갱신 필요
+스티비 '이메일 목록 조회' API는 **프로 요금제 전용**이라 현재(스탠다드) 자동 연동이 불가능하다.
+
+    # data/archive.tsv 맨 위에 추가:  2026.9.30<TAB>9월 소식<TAB>https://stib.ee/xxxx
     python3 data/classify.py
-카테고리는 제목 키워드로 자동 분류된다(event → program → insight → news 순).
-틀리면 `articles.json`의 해당 `category`를 직접 고쳐도 되지만,
-classify.py를 다시 돌리면 덮어쓰므로 규칙 쪽을 고치는 편이 안전하다.
+    git add -A && git commit -m "add: 9월호" && git push origin main && git push personal main
 
-## 남은 TODO
-- feedback.html: 구글 폼 주소 연결
-
-## 설계 메모
-구독은 **한 군데로만** 받는다(그룹 분리 안 함). 웹사이트에서만 주제별로 분류해 보여준다.
-카드를 누르면 스티비 원문(stib.ee/...)으로 이동한다 — 본문은 복제하지 않는다.
-
-## 배포 — GitHub Pages
-Settings → Pages → Source: *Deploy from a branch* → Branch `main` / `(root)` → Save.
-`.nojekyll`이 있어야 Jekyll이 파일을 건드리지 않는다(밑줄로 시작하는 파일 무시 등).
-저장소가 Public이어야 무료다. push하면 1~2분 뒤 자동 반영된다.
+링크는 스티비 아카이브에서 해당 호 제목 우클릭 → 링크 주소 복사.
+`articles.json`은 `cache: 'no-cache'`로 읽으므로 방문자에게 옛 목록이 남지 않는다.
 
 ## 스티비 연결 (고정값)
 - 구독 페이지: https://page.stibee.com/subscriptions/106252
 - 아카이브 전체: https://page.stibee.com/archives/106252
-
-## 새 호가 나가면 — 수동 갱신 필요
-스티비 '이메일 목록 조회' API는 **프로 요금제 전용**이라 현재(스탠다드) 자동 연동이 불가능하다.
-새 호를 발송했다면 `data/archive.tsv` 맨 위에 한 줄 추가하고 아래를 실행한다.
-
-    날짜<TAB>제목<TAB>링크        예: 2026.9.30<TAB>9월 소식<TAB>https://stib.ee/xxxx
-    python3 data/classify.py
-    git add -A && git commit -m "add: 9월호" && git push origin main && git push personal main
-
-링크는 스티비 아카이브에서 해당 호 제목을 우클릭 → 링크 주소 복사.

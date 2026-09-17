@@ -1,47 +1,94 @@
 # -*- coding: utf-8 -*-
-"""archive.tsv -> articles.json  (카테고리 자동 분류)"""
-import json, re, sys
+"""archive.tsv -> articles.json
+
+분류 규칙은 위에서부터 순서대로 검사한다(먼저 걸리는 쪽이 이김).
+규칙으로 안 잡히는 건 data/overrides.tsv 에 "링크<TAB>카테고리" 로 직접 지정한다.
+"""
+import json, re, sys, os
 from collections import Counter
 
-RULES = [
-  # 순서 중요: 위에서부터 먼저 걸린다
+CATS = ['monthly', 'insight', 'event', 'program']
 
-  ('event',   ['데모데이','네트워킹','세미나','포럼','컨퍼런스','초대','사전등록','사전 등록',
-               '클럽하우스','오디션','상담회','비즈매칭','행사','gravity','슈퍼 매치',
-               'office hour','오피스아워','한자리에','startup:con','만나보세요','만나는',
-               '생중계','접수 start','d-6','참가자 모집','만나요','무대']),
-  ('program', ['배치','기 프로그램','모집','지원하세요','지원 사업','지원사업','spark claw',
-               '스파크클로','액셀러레이팅','접수','선정','운영기관','찾습니다','프론티어',
-               '아이디어톤','창업경진대회','poc 참여','도전하세요','신청 open','지원 안내',
-               '참여 기업','모집 안내','기업을 모집']),
-  ('insight', ['꿀팁','노하우','비밀','비하인드','결정 기준','특징 3가지','말하는','밝히는',
-               '어떻게 진출','전략 대방출','팁 대방출','북극성','쌉가능','어디서 빌리나',
-               '하고 싶은 이야기','성장 전략','인사이트 공유','밖에 모르신다고요',
-               '진짜 도움 돼','고민을 들려주세요','궁금하다면']),
+RULES = [
+    # ── 1) 스파크랩 월간호 : 정기 발행호 + 스파크랩 자체 소식 ──────────────
+    ('monthly', [
+        r'\d\s*월\s*소식', r'월소식', r'마지막.{0,4}스파크레터', r'스파크랩\s*소식',
+        r'운영기관', r'\d+\s*살이 된', r'주년',
+        r'스파크랩\s*&\s*포트폴리오',
+    ]),
+    # ── 2) 행사·데모데이 : 특정 일시에 열리는 자리 ────────────────────────
+    ('event', [
+        r'데모데이', r'네트워킹', r'세미나', r'포럼', r'컨퍼런스', r'초대',
+        r'사전\s*등록', r'클럽하우스', r'오디션', r'상담회', r'비즈매칭',
+        r'행사', r'GRAVITY', r'슈퍼 매치', r'오피스\s*아워', r'Office Hour',
+        r'한자리에', r'한 자리에', r'STARTUP:CON', r'생중계', r'D-\d',
+        r'IR 미팅', r'무대', r'만나보세요', r'개최', r'참가자 모집', r'만나요',
+        r'아이디어톤', r'창업경진대회', r'경진대회',
+    ]),
+    # ── 3) 프로그램·모집 : 지원해서 뽑히는 것 ─────────────────────────────
+    ('program', [
+        r'\d+\s*기\b', r'배치', r'모집', r'지원하세요', r'지원 사업', r'지원사업',
+        r'Spark Claw', r'스파크클로', r'액셀러레이팅', r'접수', r'도전하세요',
+        r'선정된', r'선정 기업', r'선정 소식', r'선정 스타트업', r'선정됐을까',
+        r'찾습니다', r'프론티어', r'PoC 참여', r'참여 기업 모집', r'신청 OPEN',
+        r'스타트업을 소개합니다', r'지원 안내',
+    ]),
+    # ── 4) 스파크랩만의 인사이트 : 읽을거리 (규칙 없이도 기본값) ──────────
 ]
 
-def cat(t):
-    low = t.lower()
-    if re.search(r'(월\s*소식|월소식|마지막 .{0,3}스파크레터|스파크레터\s*\d|스파크랩 소식)', t):
-        return 'news'
-    for name, kws in RULES:
-        if any(k in low for k in kws):
-            return name
-    return 'news'
+FALLBACK = 'insight'
 
-rows = []
-for line in open('data/archive.tsv', encoding='utf-8'):
-    line = line.rstrip('\n')
-    if not line.strip(): continue
-    d, title, url = line.split('\t')
-    y, m, dd = re.findall(r'\d+', d)
-    rows.append({
-        'date': f'{y}-{int(m):02d}-{int(dd):02d}',
-        'title': title.strip(),
-        'url': url.strip(),
-        'category': cat(title),
-        'ad': title.strip().startswith(('(광고)', '(재발송)')),
-    })
-rows.sort(key=lambda r: r['date'], reverse=True)
-json.dump(rows, open('articles.json','w',encoding='utf-8'), ensure_ascii=False, indent=1)
-print('총', len(rows), dict(Counter(r['category'] for r in rows)))
+
+def classify(title):
+    for cat, pats in RULES:
+        for p in pats:
+            if re.search(p, title, re.I):
+                return cat
+    return FALLBACK
+
+
+def main():
+    base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    tsv = os.path.join(base, 'data', 'archive.tsv')
+    ovr = os.path.join(base, 'data', 'overrides.tsv')
+    out = os.path.join(base, 'articles.json')
+
+    overrides = {}
+    if os.path.exists(ovr):
+        for line in open(ovr, encoding='utf-8'):
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            url, cat = line.split('\t')[:2]
+            overrides[url.strip()] = cat.strip()
+
+    rows = []
+    for line in open(tsv, encoding='utf-8'):
+        line = line.rstrip('\n')
+        if not line.strip():
+            continue
+        d, title, url = line.split('\t')
+        y, m, dd = re.findall(r'\d+', d)
+        url = url.strip()
+        cat = overrides.get(url) or classify(title)
+        if cat not in CATS:
+            sys.exit(f'알 수 없는 카테고리 "{cat}" — {url}')
+        rows.append({
+            'date': f'{y}-{int(m):02d}-{int(dd):02d}',
+            'title': title.strip(),
+            'url': url,
+            'category': cat,
+            'ad': title.strip().startswith(('(광고)', '(재발송)')),
+        })
+
+    rows.sort(key=lambda r: r['date'], reverse=True)
+    json.dump(rows, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+    c = Counter(r['category'] for r in rows)
+    print(f'총 {len(rows)}건 (수동 지정 {len(overrides)}건)')
+    for k in CATS:
+        print(f'  {k:8} {c[k]:3}')
+
+
+if __name__ == '__main__':
+    main()
