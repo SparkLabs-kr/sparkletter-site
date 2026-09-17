@@ -18,7 +18,7 @@
 ## 사이트 구조
 - `index.html` — 지난 호 아카이브 (섹션별 카드 그리드)
 - 구독은 별도 페이지 없이 사이드바에서 스티비로 바로 연결한다
-- `feedback.html` — 피드백
+- 페이지는 `index.html` 하나뿐이다 (피드백 페이지는 2026-09-17에 없앴다 — 구글 폼을 만들지 않기로 함)
 - `app.js` / `style.css` / `articles.json` / `logo-white.png`
 
 배포용 파일은 **저장소 루트**에 둔다. Vercel·GitHub Pages가 설정 없이 바로 서빙한다.
