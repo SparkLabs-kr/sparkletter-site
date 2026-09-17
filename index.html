@@ -6,55 +6,56 @@
 <title>스파크레터</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header class="top"><div class="top__in">
+<body class="has-side">
+<aside class="side">
   <a class="brand" href="./"><img src="logo-white.png" alt="SPARKLETTER"></a>
-  <nav class="nav">
+  <nav class="side__nav">
+    <a href="./" aria-current="page"><span>🏠</span>home</a>
+    <a href="subscribe.html"><span>✉️</span>subscribe</a>
+    <a href="feedback.html"><span>💬</span>feedback</a>
+  </nav>
+  <nav class="side__cats">
     <a href="#all">🗂️ 전체보기</a>
     <a href="#insight">💡 성장 인사이트</a>
     <a href="#event">🎤 행사·데모데이</a>
     <a href="#program">🚀 프로그램·모집</a>
     <a href="#news">⚡ 스파크랩 뉴스</a>
   </nav>
-</div></header>
-
-<main class="wrap" id="main">
+  <a class="side__arc" href="https://page.stibee.com/archives/106252" target="_blank" rel="noopener">스티비 아카이브 전체보기 ↗</a>
+</aside>
+<main class="main" id="main">
+  <section class="hero">
+    <h1>지난 스파크레터</h1>
+    <p>2021년부터 보내드린 소식 106편을 주제별로 모았어요.<br>
+       카드를 누르면 원문으로 이동합니다.</p>
+    <a class="hero__link" href="https://page.stibee.com/archives/106252" target="_blank" rel="noopener">📬 스티비 아카이브에서 전체보기 ↗</a>
+  </section>
   <section class="sec" id="all">
     <h2 class="sec__h">📣 최신 콘텐츠</h2>
     <div class="grid" data-grid="all"></div>
     <button class="more" data-more="all">↓ Load more</button>
   </section>
-
   <section class="sec" id="insight">
     <h2 class="sec__h">💡 성장 인사이트</h2>
     <div class="grid" data-grid="insight"></div>
     <button class="more" data-more="insight">↓ Load more</button>
   </section>
-
   <section class="sec" id="event">
     <h2 class="sec__h">🎤 행사·데모데이</h2>
     <div class="grid" data-grid="event"></div>
     <button class="more" data-more="event">↓ Load more</button>
   </section>
-
   <section class="sec" id="program">
     <h2 class="sec__h">🚀 프로그램·모집</h2>
     <div class="grid" data-grid="program"></div>
     <button class="more" data-more="program">↓ Load more</button>
   </section>
-
   <section class="sec" id="news">
     <h2 class="sec__h">⚡ 스파크랩 뉴스</h2>
     <div class="grid" data-grid="news"></div>
     <button class="more" data-more="news">↓ Load more</button>
   </section>
 </main>
-
-<nav class="tabbar">
-  <a href="./" aria-current="page"><span>🏠</span>home</a>
-  <a href="subscribe.html"><span>✉️</span>subscribe</a>
-  <a href="feedback.html"><span>💬</span>feedback</a>
-</nav>
 <script src="app.js"></script>
 </body>
 </html>

@@ -32,7 +32,6 @@
 classify.py를 다시 돌리면 덮어쓰므로 규칙 쪽을 고치는 편이 안전하다.
 
 ## 남은 TODO
-- subscribe.html: 스티비 구독 페이지 주소 (`000000`) 교체
 - feedback.html: 구글 폼 주소 연결
 
 ## 설계 메모
@@ -43,3 +42,17 @@ classify.py를 다시 돌리면 덮어쓰므로 규칙 쪽을 고치는 편이 �
 Settings → Pages → Source: *Deploy from a branch* → Branch `main` / `(root)` → Save.
 `.nojekyll`이 있어야 Jekyll이 파일을 건드리지 않는다(밑줄로 시작하는 파일 무시 등).
 저장소가 Public이어야 무료다. push하면 1~2분 뒤 자동 반영된다.
+
+## 스티비 연결 (고정값)
+- 구독 페이지: https://page.stibee.com/subscriptions/106252
+- 아카이브 전체: https://page.stibee.com/archives/106252
+
+## 새 호가 나가면 — 수동 갱신 필요
+스티비 '이메일 목록 조회' API는 **프로 요금제 전용**이라 현재(스탠다드) 자동 연동이 불가능하다.
+새 호를 발송했다면 `data/archive.tsv` 맨 위에 한 줄 추가하고 아래를 실행한다.
+
+    날짜<TAB>제목<TAB>링크        예: 2026.9.30<TAB>9월 소식<TAB>https://stib.ee/xxxx
+    python3 data/classify.py
+    git add -A && git commit -m "add: 9월호" && git push origin main && git push personal main
+
+링크는 스티비 아카이브에서 해당 호 제목을 우클릭 → 링크 주소 복사.
