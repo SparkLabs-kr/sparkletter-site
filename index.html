@@ -3,38 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>스파크레터 아카이브</title>
+<title>스파크레터</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top"><div class="top__in">
   <a class="brand" href="./"><img src="logo-white.png" alt="SPARKLETTER"></a>
   <nav class="nav">
-    <a href="./" aria-current="page">HOME</a>
-    <a href="subscribe.html">SUBSCRIBE</a>
-    <a href="feedback.html">FEEDBACK</a>
+    <a href="#all">🗂️ 전체보기</a>
+    <a href="#insight">💡 성장 인사이트</a>
+    <a href="#event">🎤 행사·데모데이</a>
+    <a href="#program">🚀 프로그램·모집</a>
+    <a href="#news">⚡ 스파크랩 뉴스</a>
   </nav>
 </div></header>
-<main class="wrap">
-  <h1 class="lede">지난 스파크레터</h1>
-  <p class="sub">2021년부터 보내드린 소식을 주제별로 모았습니다.</p>
 
-  <div class="tabs" role="tablist">
-    <button class="tab" role="tab" data-cat="all"     aria-selected="true">🗂️ 전체</button>
-    <button class="tab" role="tab" data-cat="insight" aria-selected="false">💡 성장 인사이트</button>
-    <button class="tab" role="tab" data-cat="event"   aria-selected="false">🎤 행사·데모데이</button>
-    <button class="tab" role="tab" data-cat="program" aria-selected="false">🚀 프로그램·모집</button>
-    <button class="tab" role="tab" data-cat="news"    aria-selected="false">⚡ 스파크랩 뉴스</button>
-  </div>
+<main class="wrap" id="main">
+  <section class="sec" id="all">
+    <h2 class="sec__h">📣 최신 콘텐츠</h2>
+    <div class="grid" data-grid="all"></div>
+    <button class="more" data-more="all">↓ Load more</button>
+  </section>
 
-  <p class="count" id="count"></p>
-  <ul class="list" id="list"></ul>
-  <button class="more" id="more" hidden>더 보기</button>
+  <section class="sec" id="insight">
+    <h2 class="sec__h">💡 성장 인사이트</h2>
+    <div class="grid" data-grid="insight"></div>
+    <button class="more" data-more="insight">↓ Load more</button>
+  </section>
+
+  <section class="sec" id="event">
+    <h2 class="sec__h">🎤 행사·데모데이</h2>
+    <div class="grid" data-grid="event"></div>
+    <button class="more" data-more="event">↓ Load more</button>
+  </section>
+
+  <section class="sec" id="program">
+    <h2 class="sec__h">🚀 프로그램·모집</h2>
+    <div class="grid" data-grid="program"></div>
+    <button class="more" data-more="program">↓ Load more</button>
+  </section>
+
+  <section class="sec" id="news">
+    <h2 class="sec__h">⚡ 스파크랩 뉴스</h2>
+    <div class="grid" data-grid="news"></div>
+    <button class="more" data-more="news">↓ Load more</button>
+  </section>
 </main>
+
+<nav class="tabbar">
+  <a href="./" aria-current="page"><span>🏠</span>home</a>
+  <a href="subscribe.html"><span>✉️</span>subscribe</a>
+  <a href="feedback.html"><span>💬</span>feedback</a>
+</nav>
 <script src="app.js"></script>
-<footer class="foot">
-  SPARKLETTER · powered by SparkLabs<br>
-  구독은 <a href="https://stibee.com" target="_blank" rel="noopener">스티비</a>를 통해 진행되며, 언제든 해지하실 수 있어요.
-</footer>
 </body>
 </html>

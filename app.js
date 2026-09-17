@@ -1,4 +1,6 @@
-const PAGE = 20;
+const STEP = 6;          // Load more 한 번에 몇 개씩
+const FIRST = { all: 12 }; // 섹션별 처음 보여줄 개수 (기본 STEP)
+
 const LABEL = {
   insight: '성장 인사이트',
   event: '행사·데모데이',
@@ -6,67 +8,78 @@ const LABEL = {
   news: '스파크랩 뉴스',
 };
 
-const listEl = document.getElementById('list');
-const countEl = document.getElementById('count');
-const moreEl = document.getElementById('more');
-const tabs = [...document.querySelectorAll('.tab')];
-
+const state = {}; // { [cat]: shownCount }
 let all = [];
-let cat = 'all';
-let shown = 0;
 
-function filtered() {
+function rows(cat) {
   return cat === 'all' ? all : all.filter((a) => a.category === cat);
 }
 
-function render(reset) {
-  const rows = filtered();
-  if (reset) {
-    listEl.innerHTML = '';
-    shown = 0;
-  }
-  if (!rows.length) {
-    listEl.innerHTML = '<li class="empty">아직 이 주제의 글이 없어요.</li>';
-    countEl.textContent = '';
-    moreEl.hidden = true;
-    return;
-  }
-  const slice = rows.slice(shown, shown + PAGE);
-  for (const a of slice) {
-    const li = document.createElement('li');
-    li.className = 'item';
-    const [y, m, d] = a.date.split('-');
-    li.innerHTML = `
-      <a href="${a.url}" target="_blank" rel="noopener">
-        <time datetime="${a.date}">${y}. ${+m}. ${+d}.</time>
-        <span class="t"></span>
-        <span class="c ${a.category}">${LABEL[a.category]}</span>
-      </a>`;
-    // 제목은 textContent로 넣어 따옴표·꺾쇠가 깨지지 않게 한다
-    li.querySelector('.t').textContent = a.title;
-    listEl.appendChild(li);
-  }
-  shown += slice.length;
-  countEl.textContent = `${rows.length}개의 글`;
-  moreEl.hidden = shown >= rows.length;
+function card(a) {
+  const el = document.createElement('a');
+  el.className = `card card--${a.category}`;
+  el.href = a.url;                       // 스티비 원문으로 이동
+  el.target = '_blank';
+  el.rel = 'noopener';
+
+  const chip = document.createElement('span');
+  chip.className = 'chip';
+  chip.textContent = LABEL[a.category];
+
+  const t = document.createElement('strong');
+  t.className = 'card__t';
+  t.textContent = a.title;               // 따옴표·꺾쇠가 깨지지 않게 textContent
+
+  const [y, m, d] = a.date.split('-');
+  const time = document.createElement('time');
+  time.className = 'card__d';
+  time.dateTime = a.date;
+  time.textContent = `${y}/${m}/${d}`;
+
+  el.append(chip, t, time);
+  return el;
 }
 
-tabs.forEach((t) =>
-  t.addEventListener('click', () => {
-    tabs.forEach((x) => x.setAttribute('aria-selected', String(x === t)));
-    cat = t.dataset.cat;
-    render(true);
-  })
-);
+function paint(cat) {
+  const grid = document.querySelector(`[data-grid="${cat}"]`);
+  const more = document.querySelector(`[data-more="${cat}"]`);
+  const list = rows(cat);
+  const want = state[cat];
 
-moreEl.addEventListener('click', () => render(false));
+  grid.innerHTML = '';
+  list.slice(0, want).forEach((a) => grid.appendChild(card(a)));
+
+  if (!list.length) {
+    grid.innerHTML = '<p class="empty">아직 이 주제의 글이 없어요.</p>';
+  }
+  more.hidden = want >= list.length;
+}
+
+function init() {
+  document.querySelectorAll('[data-grid]').forEach((g) => {
+    const cat = g.dataset.grid;
+    state[cat] = FIRST[cat] || STEP;
+    paint(cat);
+  });
+
+  document.querySelectorAll('[data-more]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.more;
+      state[cat] += STEP;
+      paint(cat);
+    });
+  });
+}
 
 fetch('articles.json')
   .then((r) => r.json())
   .then((d) => {
     all = d;
-    render(true);
+    init();
   })
   .catch(() => {
-    listEl.innerHTML = '<li class="empty">목록을 불러오지 못했어요.</li>';
+    document.getElementById('main').insertAdjacentHTML(
+      'afterbegin',
+      '<p class="empty">목록을 불러오지 못했어요.</p>'
+    );
   });
