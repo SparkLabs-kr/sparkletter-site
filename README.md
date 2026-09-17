@@ -16,8 +16,8 @@
   당분간 archive.tsv를 사람이 갱신한다.
 
 ## 사이트 구조
-- `index.html` — 지난 호 아카이브 (카테고리 탭 필터)
-- `subscribe.html` — 구독 안내 (레터 3종 카드 → 스티비)
+- `index.html` — 지난 호 아카이브 (섹션별 카드 그리드)
+- 구독은 별도 페이지 없이 사이드바에서 스티비로 바로 연결한다
 - `feedback.html` — 피드백
 - `app.js` / `style.css` / `articles.json` / `logo-white.png`
 
