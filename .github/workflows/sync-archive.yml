@@ -1,0 +1,32 @@
+name: 스티비 아카이브 동기화
+
+# 스티비에 새 호가 발행되면 articles.json에 자동 반영한다.
+# 수동 갱신이 필요 없도록 하루 한 번 돌고, 변경이 있을 때만 커밋한다.
+on:
+  schedule:
+    - cron: '0 1 * * *' # 매일 10:00 KST (UTC 01:00)
+  workflow_dispatch: # 필요하면 Actions 탭에서 직접 실행
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 스티비에서 목록 받아 분류
+        run: python3 data/sync.py
+
+      - name: 변경이 있으면 커밋
+        run: |
+          if git diff --quiet articles.json data/archive.json; then
+            echo "변경 없음 — 커밋하지 않는다"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles.json data/archive.json
+          git commit -m "chore: 스티비 아카이브 동기화 ($(date -u +%Y-%m-%d))"
+          git push
