@@ -81,3 +81,12 @@
   회사 Pages가 뜨면 더 쓰지 않는다. (remote 이름 `personal`)
 
 평소에는 `git push origin main` 하나면 된다.
+
+## CSS·JS를 고쳤을 때 — 반드시 bump.sh 실행
+
+GitHub Pages는 CSS·JS에 **긴 캐시**를 걸어서, 파일만 바꾸면 이미 방문했던 사람은
+옛 화면을 계속 본다. 그래서 주소에 버전을 붙여 쓴다(`style.css?v=202609171559`).
+
+    ./bump.sh && git add -A && git commit -m "..." && git push
+
+`articles.json`은 `cache:'no-cache'`로 읽으므로 이 처리가 필요 없다(새 호는 자동 반영).

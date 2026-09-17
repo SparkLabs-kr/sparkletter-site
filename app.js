@@ -32,7 +32,8 @@ function chipText(a) {
 
 function card(a) {
   const el = document.createElement('a');
-  el.className = `card card--${a.category}`;
+  // 미리보기 문구가 없으면 제목이 빈 공간을 차지하도록 표시해둔다
+  el.className = `card card--${a.category}${a.preview ? '' : ' card--nopreview'}`;
   el.href = a.url; // 스티비 원문으로 이동
   el.target = '_blank';
   el.rel = 'noopener';
@@ -45,13 +46,21 @@ function card(a) {
   t.className = 'card__t';
   t.textContent = a.title; // 따옴표·꺾쇠가 깨지지 않게 textContent
 
+  // 스티비가 주는 미리보기 문구 — 없는 호도 있어서 있을 때만 붙인다
+  let p = null;
+  if (a.preview) {
+    p = document.createElement('span');
+    p.className = 'card__p';
+    p.textContent = a.preview;
+  }
+
   const [y, m, d] = a.date.split('-');
   const time = document.createElement('time');
   time.className = 'card__d';
   time.dateTime = a.date;
   time.textContent = `${y}/${m}/${d}`;
 
-  el.append(chip, t, time);
+  el.append(chip, t, ...(p ? [p] : []), time);
   return el;
 }
 

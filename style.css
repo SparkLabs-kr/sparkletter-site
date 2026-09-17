@@ -104,7 +104,7 @@ a{color:inherit}
 .grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
 .card{
   display:flex; flex-direction:column; text-decoration:none;
-  border-radius:10px; padding:20px 18px 16px; min-height:200px;
+  border-radius:10px; padding:20px 18px 16px; min-height:238px;
   background:var(--surface); border:1px solid var(--line);
   transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
@@ -120,8 +120,13 @@ a{color:inherit}
 .card__t{
   font-size:16px; font-weight:700; line-height:1.38; letter-spacing:-.02em;
   color:var(--text);
-  flex:1; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
+  overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
 }
+.card__p{
+  margin-top:9px; font-size:12.5px; line-height:1.5; color:var(--muted);
+  flex:1; overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
+}
+.card--nopreview .card__t{flex:1; -webkit-line-clamp:5}
 .card__d{margin-top:13px; font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums}
 
 .more{
@@ -164,7 +169,7 @@ a{color:inherit}
 }
 @media (max-width:620px){
   .grid{grid-template-columns:repeat(2,1fr); gap:12px}
-  .card{min-height:158px; padding:15px 14px}
+  .card{min-height:200px; padding:16px 15px}
   .card__t{font-size:13px}
   .card__t{font-size:14.5px}
   .nav__main{padding:8px 10px; font-size:13px}
