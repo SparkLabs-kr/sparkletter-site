@@ -39,4 +39,7 @@ classify.py를 다시 돌리면 덮어쓰므로 규칙 쪽을 고치는 편이 �
 구독은 **한 군데로만** 받는다(그룹 분리 안 함). 웹사이트에서만 주제별로 분류해 보여준다.
 카드를 누르면 스티비 원문(stib.ee/...)으로 이동한다 — 본문은 복제하지 않는다.
 
-<!-- deploy check -->
+## 배포 — GitHub Pages
+Settings → Pages → Source: *Deploy from a branch* → Branch `main` / `(root)` → Save.
+`.nojekyll`이 있어야 Jekyll이 파일을 건드리지 않는다(밑줄로 시작하는 파일 무시 등).
+저장소가 Public이어야 무료다. push하면 1~2분 뒤 자동 반영된다.
