@@ -1,20 +1,21 @@
-/* 쿨 뉴트럴 라이트 팔레트
-   - 웜 베이지는 요즘 AI가 뽑는 화면의 전형이라 피한다. 살짝 푸른 기가 도는 near-white.
-   - 액센트(브랜드 핑크)는 넓게 칠하지 않고 행동·강조에만 쓴다 */
+/* D. Clay + Electric — 흙빛 다크 + 일렉트릭 코랄
+   - 순수 검정이 아니라 따뜻한 클레이 다크. 표면이 올라갈수록 밝아진다.
+   - 코랄(#FF5C39)은 화면에서 유일하게 튀는 색으로, 행동(구독·아카이브)에만 쓴다.
+   - 카테고리 칩은 어스톤으로 낮춰 액센트와 경쟁하지 않게 한다. */
 :root{
-  --bg:#F7F8FA;        /* 쿨 near-white — 페이지 바탕 */
-  --surface:#FFFFFF;   /* 카드 등 올라온 면 */
-  --line:#E6E8EC;
-  --line-2:#D3D7DE;
-  --text:#14161A;      /* 잉크 */
-  --muted:#6B7280;
-  --accent:#ED1968;    /* 스파크랩 핑크 */
-  --accent-ink:#FFFFFF;
+  --bg:#1B1A16;        /* 클레이 다크 — 페이지 바탕 */
+  --surface:#24231D;   /* 카드 등 올라온 면 */
+  --line:#35332A;
+  --line-2:#474437;
+  --text:#EFEBE0;      /* 본 */
+  --muted:#9C968A;
+  --accent:#FF5C39;    /* 일렉트릭 코랄 */
+  --accent-ink:#1B1A16;
 
-  /* 카테고리 색 — 칩에만 쓴다 */
-  --c-insight:#C2185B;
-  --c-open:#1F6F5C;
-  --c-monthly:#B45309;
+  /* 카테고리 색 — 칩에만 쓴다 (어스톤) */
+  --c-insight:#C9846F;
+  --c-open:#7E9B66;
+  --c-monthly:#C79A4B;
 
   --side:268px;
 }
@@ -25,6 +26,8 @@ body{
   font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo",sans-serif;
   line-height:1.6; -webkit-font-smoothing:antialiased;
   position:relative; z-index:0;
+  word-break:keep-all;      /* 한국어 단어 중간에서 줄바꿈 금지 */
+  overflow-wrap:break-word; /* 단, 넘칠 만큼 긴 영문/URL은 끊는다 */
 }
 a{color:inherit}
 
@@ -44,7 +47,7 @@ a{color:inherit}
   color:var(--muted); font-size:14.5px; letter-spacing:.02em;
 }
 .nav__main span{font-size:16px; line-height:1}
-.nav__main:hover{background:#ECEEF2; color:var(--text)}
+.nav__main:hover{background:#26251F; color:var(--text)}
 .nav__main[aria-current="page"]{background:var(--text); color:var(--bg); font-weight:700}
 
 /* home 아래 하위 탭 */
@@ -56,7 +59,7 @@ a{color:inherit}
   padding:6px 10px; border-radius:7px; text-decoration:none;
   color:var(--muted); font-size:12.5px;
 }
-.side__subs a:hover{background:#ECEEF2; color:var(--text)}
+.side__subs a:hover{background:#26251F; color:var(--text)}
 
 .side__arc{
   margin-top:auto; font-size:12px; color:var(--muted);
@@ -72,7 +75,7 @@ a{color:inherit}
 }
 .watermark img{
   width:min(165vw, 2400px); max-width:none; height:auto;
-  opacity:.05;
+  opacity:.06;
 }
 @media (max-width:900px){ .watermark{display:none} }
 
@@ -80,19 +83,23 @@ a{color:inherit}
 .has-side .main{position:relative; z-index:1; margin-left:var(--side); padding:44px 32px 80px; max-width:1180px}
 .main.narrow{max-width:660px; padding-top:64px}
 
-.hero{margin-bottom:52px}
-.hero h1{font-size:28px; margin:0 0 12px; letter-spacing:-.02em}
-.hero p{color:var(--muted); font-size:14px; margin:0 0 20px}
+.hero{margin-bottom:76px; max-width:34ch}
+.hero h1{
+  font-size:clamp(36px, 5vw, 60px); font-weight:800; line-height:1.08;
+  letter-spacing:-.04em; margin:0 0 18px;
+}
+.hero p{color:var(--muted); font-size:15.5px; margin:0 0 26px; max-width:52ch}
 .hero__link{
   display:inline-block; font-size:13px; font-weight:700; text-decoration:none;
   color:var(--accent-ink); background:var(--accent); padding:11px 18px; border-radius:999px;
 }
 .hero__link:hover{filter:brightness(1.06)}
 
-.sec{margin-bottom:54px; scroll-margin-top:24px}
+.sec{margin-bottom:76px; scroll-margin-top:24px}
 .sec__h{
-  font-size:19px; margin:0 0 18px; letter-spacing:-.01em;
-  padding-bottom:13px; border-bottom:1px solid var(--line);
+  font-size:clamp(23px, 2.6vw, 32px); font-weight:800; line-height:1.2;
+  letter-spacing:-.03em; margin:0 0 22px;
+  padding-bottom:16px; border-bottom:1px solid var(--line);
 }
 
 /* ── 세부 분류 필터 칩 ─────────────── */
@@ -106,24 +113,24 @@ a{color:inherit}
 .fchip[aria-pressed="true"]{background:var(--text); color:var(--bg); border-color:var(--text); font-weight:700}
 
 /* ── 카드 ───────────────────────────── */
-.grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+.grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
 .card{
   display:flex; flex-direction:column; text-decoration:none;
-  border-radius:10px; padding:18px 17px 15px; min-height:186px;
+  border-radius:10px; padding:20px 18px 16px; min-height:200px;
   background:var(--surface); border:1px solid var(--line);
   transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
-.card:hover{transform:translateY(-3px); box-shadow:0 6px 16px rgba(20,22,26,.07); border-color:var(--line-2)}
+.card:hover{transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,.35); border-color:var(--line-2)}
 .chip{
   align-self:flex-start; font-size:10.5px; font-weight:700; letter-spacing:.01em;
   padding:4px 9px; border-radius:6px; margin-bottom:13px;
-  background:var(--c); color:#fff;
+  background:var(--c); color:#1B1A16;
 }
 .card--insight{--c:var(--c-insight)}
 .card--open   {--c:var(--c-open)}
 .card--monthly{--c:var(--c-monthly)}
 .card__t{
-  font-size:14.5px; font-weight:700; line-height:1.45; letter-spacing:-.01em;
+  font-size:16px; font-weight:700; line-height:1.38; letter-spacing:-.02em;
   color:var(--text);
   flex:1; overflow:hidden; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical;
 }
@@ -138,10 +145,13 @@ a{color:inherit}
 .empty{color:var(--muted); font-size:14px; grid-column:1/-1; padding:24px 0}
 
 /* ── 구독 / 피드백 ──────────────────── */
-.lede{font-size:26px; margin:0 0 14px; letter-spacing:-.02em}
-.sub{color:var(--muted); font-size:14px; margin:0 0 28px}
+.lede{
+  font-size:clamp(32px, 4.2vw, 46px); font-weight:800; line-height:1.1;
+  letter-spacing:-.04em; margin:0 0 20px;
+}
+.sub{color:var(--muted); font-size:15.5px; margin:0 0 34px}
 .bullets{list-style:none; padding:0; margin:0 0 32px; font-size:14px}
-.bullets li{padding:12px 0; border-bottom:1px solid var(--line); color:#374151}
+.bullets li{padding:12px 0; border-bottom:1px solid var(--line); color:#D6D1C4}
 .bullets b{color:var(--text)}
 .cta{
   display:block; text-align:center; padding:16px; border-radius:10px;
@@ -168,7 +178,6 @@ a{color:inherit}
   .grid{grid-template-columns:repeat(2,1fr); gap:12px}
   .card{min-height:158px; padding:15px 14px}
   .card__t{font-size:13px}
-  .hero h1{font-size:22px}
-  .lede{font-size:21px}
+  .card__t{font-size:14.5px}
   .nav__main{padding:8px 10px; font-size:13px}
 }
